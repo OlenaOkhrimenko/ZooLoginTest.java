@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class MainPage {
-    private WebDriver driver;
+    private static WebDriver driver;
     private static WebDriverWait wait;
 
     public MainPage (WebDriver driver){
@@ -20,7 +20,7 @@ public class MainPage {
         PageFactory.initElements(driver,this);
     }
 
-        @FindBy(name = "//a[contains(@class, 'navigation__link navigation__link--enter')]")
+        @FindBy(xpath = "//a[contains(@class, 'navigation__link navigation__link--enter')]")
         public WebElement loginButton;
 
         public void clickOnLoginButton () {

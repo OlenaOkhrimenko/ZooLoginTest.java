@@ -11,8 +11,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class LoginPage {
-    private WebDriver driver;
-    private WebDriverWait wait;
+    private static WebDriver driver;
+    private static WebDriverWait wait;
 
     public LoginPage(WebDriver driver){
         this.driver = driver;
@@ -23,13 +23,13 @@ public class LoginPage {
     @FindBy(xpath = "//input[@name='data[email]']")
     public WebElement mail;
     public void enterMail () {
-        wait.until(ExpectedConditions.visibilityOfElementLocated((By)mail)).sendKeys("helen@gmail.com");
+        mail.sendKeys("helen@gmail.com");
     }
 
     @FindBy(xpath = "//input[@name='data[password]']")
     public WebElement password;
-    public void enterPassword (){
-        wait.until(ExpectedConditions.visibilityOfElementLocated((By)password)).sendKeys("Helen2024!");
+    public void enterPassword(){
+        password.sendKeys("Helen2024!");
         }
 
     @FindBy(xpath = "//input[@type='submit']")
@@ -37,4 +37,15 @@ public class LoginPage {
     public void clickOnSubmitButton (){
         wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
     }
+//    @FindBy(xpath = "//input[@name='data[password]']")
+//    public WebElement password;
+//    public void enterPassword (){
+//        wait.until(ExpectedConditions.visibilityOfElementLocated((By) password)).sendKeys("Helen2024!");
+//        }
+//
+//    @FindBy(xpath = "//input[@type='submit']")
+//    public WebElement submitButton;
+//    public void clickOnSubmitButton (){
+//        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
+//    }
 }

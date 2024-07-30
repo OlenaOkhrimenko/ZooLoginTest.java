@@ -33,7 +33,6 @@ import java.time.Duration;
             wait = new WebDriverWait(driver, Duration.ofSeconds(30));
             mainPage = new MainPage(driver);
             loginPage = new LoginPage(driver);
-
         }
 
         @Test
@@ -49,12 +48,8 @@ import java.time.Duration;
                 Assert.assertEquals(actualElementText, expectedElementText, "Expected and Actual are not the same");
             }
 
-
         @AfterTest
         void closeDriver(){
             driver.quit();
         }
-
     }
-
-
