@@ -37,15 +37,5 @@ public class LoginPage {
     public void clickOnSubmitButton (){
         wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
     }
-//    @FindBy(xpath = "//input[@name='data[password]']")
-//    public WebElement password;
-//    public void enterPassword (){
-//        wait.until(ExpectedConditions.visibilityOfElementLocated((By) password)).sendKeys("Helen2024!");
-//        }
-//
-//    @FindBy(xpath = "//input[@type='submit']")
-//    public WebElement submitButton;
-//    public void clickOnSubmitButton (){
-//        wait.until(ExpectedConditions.elementToBeClickable(submitButton)).click();
-//    }
+
 }
